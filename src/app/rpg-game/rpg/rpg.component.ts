@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Mage} from "../class/Mage";
 import {Battleground} from "../class/Battleground";
+import {JournalFight} from "../class/JournalFight";
 
 @Component({
   selector: 'app-rpg',
@@ -9,7 +10,20 @@ import {Battleground} from "../class/Battleground";
 })
 export class RpgComponent implements OnInit {
 
-  constructor() { }
+  static _journalFight: JournalFight = new JournalFight();
+
+  get journalFight(): JournalFight {
+    return RpgComponent._journalFight;
+  }
+
+  set journalFight(value: JournalFight) {
+    RpgComponent._journalFight = value;
+  }
+
+  constructor( ) { }
+
+
+
 
   ngOnInit(): void {
     let newGame: Battleground = new Battleground("Joao", "Ayoub", "Sophana", "Kevin", "Mickael", "Jeoffrey")
