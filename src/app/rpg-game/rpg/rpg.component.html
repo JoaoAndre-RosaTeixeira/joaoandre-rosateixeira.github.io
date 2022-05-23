@@ -1,3 +1,17 @@
+<div class="coinatainer"></div>
+<div class="startButton">
+<button (click)="startGame()">Creer une nouvelle partie.</button>
+<button (click)="fight()">Lancer le combat.</button>
+</div>
+
+
+<div *ngIf="newGame !== undefined">
+  <div *ngFor="let game of newGame.heroes">{{game.name}}</div>
+</div>
+
+
+
+
 
 <ul>
 <li *ngFor="let log of journalFight.logs">{{log}}</li>

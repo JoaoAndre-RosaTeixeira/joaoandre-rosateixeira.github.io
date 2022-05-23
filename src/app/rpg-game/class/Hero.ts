@@ -11,17 +11,19 @@ export abstract class Hero {
   protected _defense: number;
   protected _criticalChance: number = 5;
   protected _death: boolean = false;
+  protected _color: string;
   // protected _totalDamage: number;
   // protected _maxDamageInfliged: number;
   // protected _numberCriticalInfliged: number;
 
 
-  constructor(name: string, hitPoint: number, damageMax: number, damageMin: number, defense: number) {
+  constructor(name: string, hitPoint: number, damageMax: number, damageMin: number, defense: number, color: string) {
     this._name = name;
     this._hitPoint = hitPoint;
     this._damageMax = damageMax;
     this._damageMin = damageMin;
     this._defense = defense;
+    this._color = color
   }
 
   levelUp(target: Hero) {

@@ -11,6 +11,16 @@ import {JournalFight} from "../class/JournalFight";
 export class RpgComponent implements OnInit {
 
   static _journalFight: JournalFight = new JournalFight();
+  private _newGame: Battleground | undefined
+
+
+  get newGame(): Battleground | undefined {
+    return this._newGame;
+  }
+
+  set newGame(value: Battleground | undefined) {
+    this._newGame = value;
+  }
 
   get journalFight(): JournalFight {
     return RpgComponent._journalFight;
@@ -26,11 +36,21 @@ export class RpgComponent implements OnInit {
 
 
   ngOnInit(): void {
-    let newGame: Battleground = new Battleground("Joao", "Ayoub", "Sophana", "Kevin", "Mickael", "Jeoffrey")
 
-    newGame.fight()
+
+
+
   }
 
-
+  startGame(){
+    this._newGame = new Battleground("Joao", "Ayoub", "Sophana", "Kevin", "Mickael", "Jeoffrey")
+    console.log(this._newGame)
+  }
+  fight(){
+    this._newGame?.fight()
+  }
+  log(value?:any){
+    console.log(value)
+  }
 
 }

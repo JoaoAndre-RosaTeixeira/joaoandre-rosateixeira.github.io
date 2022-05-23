@@ -6,7 +6,7 @@ export class Mage extends Hero {
 
 
   constructor(name: string) {
-    super(name ,  300 , 58, 52, 2);
+    super(name ,  300 , 58, 52, 2, );
   }
 
   levelUp(target:Hero){
