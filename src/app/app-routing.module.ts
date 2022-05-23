@@ -5,6 +5,7 @@ import {RegionsIndexComponent} from "./regions-index/regions-index.component";
 import {DepartementsRegionComponent} from "./departements-region/departements-region.component";
 import {CommunesDepartementComponent} from "./communes-departement/communes-departement.component";
 import {FormUserComponent} from "./form-user/form-user.component";
+import {RpgComponent} from "./rpg-game/rpg/rpg.component";
 
 const routes: Routes = [
   { path: 'chess', component: ChessGameComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'regions/:codeRegion/departements', component: DepartementsRegionComponent },
   { path: 'regions/:codeRegion/departements/:codeDpt/communes', component: CommunesDepartementComponent},
   { path: 'departements', component: DepartementsRegionComponent },
-  { path: 'form/user', component: FormUserComponent }
+  { path: 'form/user', component: FormUserComponent },
+  { path: 'rpg', component: RpgComponent },
 ];
 
 @NgModule({
