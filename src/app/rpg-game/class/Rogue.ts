@@ -3,12 +3,12 @@ import {RpgComponent} from "../rpg/rpg.component";
 
 export class Rogue extends Hero {
   constructor(name: string) {
-    super(name, 320, 52, 42, 3);
+    super(name, 320, 200, 52, 42, 3, "yellow");
   }
 
   levelUp(target: Hero) {
 
-    while (this.experience > 200 * (this.level / 2)) {
+    while (this.experienceNecessary() === true) {
       super.levelUp(target)
       this._hitPoint += 33
       this.damageMin += 3

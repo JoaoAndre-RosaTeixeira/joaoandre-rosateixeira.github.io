@@ -50,7 +50,6 @@ export class Battleground {
 
 
   fight(){
-    while (this.endGame === false) {
       const first: Hero =  this.heroes[this.randInt(0, this.heroes.length - 1)];
       const second: Hero = this.heroes[this.randTarget(0, this.heroes.length - 1, this.heroes.indexOf(first))];
       first.attack(second);
@@ -58,6 +57,10 @@ export class Battleground {
         second.attack(first);
       }
       this.checkEndGame()
+    if (this.endGame === false) {
+      setTimeout( () => {
+        this.fight()
+      },500)
     }
   }
 

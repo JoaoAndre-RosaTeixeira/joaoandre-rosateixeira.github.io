@@ -13,6 +13,11 @@ import { BreadCrumbsGeoApiComponent } from './bread-crumbs-geo-api/bread-crumbs-
 import {FormsModule} from "@angular/forms";
 import { FormUserComponent } from './form-user/form-user.component';
 import { RpgComponent } from './rpg-game/rpg/rpg.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
+import { HomeComponent } from './totogame/pages/home/home.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +29,16 @@ import { RpgComponent } from './rpg-game/rpg/rpg.component';
     CommunesDepartementComponent,
     BreadCrumbsGeoApiComponent,
     FormUserComponent,
-    RpgComponent
+    RpgComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

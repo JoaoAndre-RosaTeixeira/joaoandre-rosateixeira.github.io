@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'departements', component: DepartementsRegionComponent },
   { path: 'form/user', component: FormUserComponent },
   { path: 'rpg', component: RpgComponent },
+  { path: 'totogame', component: RpgComponent },
 ];
 
 @NgModule({

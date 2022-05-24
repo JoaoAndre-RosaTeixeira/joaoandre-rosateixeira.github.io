@@ -12,7 +12,16 @@ export class RpgComponent implements OnInit {
 
   static _journalFight: JournalFight = new JournalFight();
   private _newGame: Battleground | undefined
+  private _fightOn: boolean = false
 
+
+  get fightOn(): boolean {
+    return this._fightOn;
+  }
+
+  set fightOn(value: boolean) {
+    this._fightOn = value;
+  }
 
   get newGame(): Battleground | undefined {
     return this._newGame;
@@ -44,10 +53,11 @@ export class RpgComponent implements OnInit {
 
   startGame(){
     this._newGame = new Battleground("Joao", "Ayoub", "Sophana", "Kevin", "Mickael", "Jeoffrey")
-    console.log(this._newGame)
+    this._fightOn = false
   }
   fight(){
     this._newGame?.fight()
+    this._fightOn = true
   }
   log(value?:any){
     console.log(value)
