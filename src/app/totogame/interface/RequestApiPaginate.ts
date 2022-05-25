@@ -1,7 +1,8 @@
 export interface RequestApiPaginate<T> {
   page: number
-  items_per_page: number
+  itemsPerPage: number
   total: number
-  total_page: number
+  totalPages: number
+  limit: number
   items: Array<T>
 }

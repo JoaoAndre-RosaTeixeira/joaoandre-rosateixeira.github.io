@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div class="buttonFilter">
+  <button *ngIf="this.limitApi !==this.totalApiResponse" mat-raised-button color="primary" (click)="allGame()">all
+    game
+  </button>
+  <button *ngIf="this.limitApi ===this.totalApiResponse" mat-raised-button color="primary" (click)="allGame()">no all
+    game
+  </button>
+</div>
+
+<div class="container">
+  <div class="containerGames">
+    <div routerLink="/game/{{game.slug}}" class="containerGame" *ngFor="let game of games">
+      <img [src]="game.thumbnailCover">
+      <h2 class="gameName">{{game.name}} {{game.price}}€</h2>
+    </div>
+  </div>
+
+</div>

@@ -16,6 +16,7 @@ import { RpgComponent } from './rpg-game/rpg/rpg.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './totogame/pages/home/home.component';
+import { GameComponent } from './totogame/pages/game/game.component';
 
 
 
@@ -30,7 +31,8 @@ import { HomeComponent } from './totogame/pages/home/home.component';
     BreadCrumbsGeoApiComponent,
     FormUserComponent,
     RpgComponent,
-    HomeComponent
+    HomeComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
