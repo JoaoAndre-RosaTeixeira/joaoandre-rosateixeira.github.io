@@ -3,6 +3,7 @@ import {TotogameAPI} from "../../API/totogameAPI";
 import {RequestApiPaginate} from "../../interface/RequestApiPaginate";
 import {HttpClientService} from "../../../../services/http-client.service";
 import {Game} from "../../class/Game";
+import {sprintf} from "sprintf-js";
 
 @Component({
   selector: 'app-totogame',
@@ -36,6 +37,15 @@ export class HomeComponent implements OnInit {
   }
 
   loadAPI(){
+    this.httpService.getRequest<IApiResponse<Game>>(sprintf(TotogameAPI.urlGameFilter,'publishedAt', 'desc', 9)).subscribe((json) => {
+      this.gamesPublishedAt = json.items;
+    });
+    this.httpService.getRequest<IApiResponse<Game>>(sprintf(TotogameAPI.urlGameFilter,'price', 'desc', 9)).subscribe((json) => {
+      this.gamesPrices = json.items;
+    });
+    this.httpService.getRequest<IApiResponse<Game>>(sprintf(TotogameAPI.urlGameFilter,'name', 'asc', 9)).subscribe((json) => {
+      this.gamesAlpha = json.items;
+    });
     this.httpService.getRequest<RequestApiPaginate<Game>>(TotogameAPI.url("/game"+this.limitationApi(this._limitApi))).subscribe((json ) => {
       json.items.filter( item => {
         json.limit = 1;
