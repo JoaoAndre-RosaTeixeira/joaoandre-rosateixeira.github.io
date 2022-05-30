@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-create-account',
@@ -8,9 +8,8 @@ import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/form
   styleUrls: ['./create-account.component.scss']
 })
 export class CreateAccountComponent implements OnInit {
-  private createAccountGroup: AbstractControl | undefined;
-
-  constructor(private router: Router) { }
+  createAccountFormGroup!: FormGroup;
+  constructor() {private router: Router }
 
   ngOnInit(): void {
     this.createAccountGroup = new FormGroup({
@@ -28,5 +27,4 @@ export class CreateAccountComponent implements OnInit {
       ])
     })
   }
-
 }
