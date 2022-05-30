@@ -1,4 +1,7 @@
 $imgSize: 5rem;
+body {
+}
+
 
 .buttonFilter {
   height: 10vh;
@@ -8,46 +11,80 @@ $imgSize: 5rem;
   align-items: center;
 }
 
-body {
-  background-color: black;
-}
 
-.containerGames {
+.containerArrayGames {
+  width: 100vw;
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-auto-rows: 10rem;
-  gap: 5rem;
 
-  .containerGame {
+  .gamesTitlle {
+    height: 7vh;
+    display: grid;
+    border: solid 2px blue;
+    background-color: #003ad7;
+    box-shadow: black 0px 0px 0px 10px;
+    text-align: center;
+    align-items: center;
 
-    height: 12rem;
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    h1 {
+      font-size: 5vh;
+      font-family: 'Quintessential', cursive;
+      color: #000000;
 
-    h2 {
-      text-align: center;
-      height: 2rem;
-      color: white;
-      background-color: black;
-    }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      &:after {
+        content: " :";
+      }
     }
   }
 
+  .containerGames {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 22vw);
+    grid-auto-rows: 10rem;
+    gap: 3rem;
 
+
+    .containerGame {
+
+      height: 12rem;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding-bottom: 3rem;
+
+      h2 {
+        text-align: center;
+        height: 2rem;
+        color: white;
+        background-color: black;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+    }
+
+
+  }
 }
 
 @media screen and (max-width: 700px) {
-  .containerGames {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-
+  .containerArrayGames {
+    height: auto;
+    margin-bottom: 20rem;
+    .containerGames {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+    }
   }
+
 }

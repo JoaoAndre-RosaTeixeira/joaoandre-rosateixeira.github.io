@@ -1,18 +1,42 @@
-<div class="buttonFilter">
-  <button *ngIf="this.limitApi !==this.totalApiResponse" mat-raised-button color="primary" (click)="allGame()">all
-    game
-  </button>
-  <button *ngIf="this.limitApi ===this.totalApiResponse" mat-raised-button color="primary" (click)="allGame()">no all
-    game
-  </button>
-</div>
+<div *ngIf="this.limitApi">
+  <div class="containerArrayGames" *ngFor="let games of gamesFilter">
 
-<div class="container">
-  <div class="containerGames">
-    <div routerLink="/game/{{game.slug}}" class="containerGame" *ngFor="let game of games">
-      <img [src]="game.thumbnailCover">
-      <h2 class="gameName">{{game.name}} {{game.price}}€</h2>
+
+    <div class="gamesTitlle"><h1>{{games.name}}</h1></div>
+
+    <div class="containerGames">
+      <div routerLink="/game/{{game.slug}}" class="containerGame" *ngFor="let game of games.games">
+        <img [src]="game.thumbnailCover">
+        <h2 class="gameName">{{game.name}} {{game.price}}€</h2>
+      </div>
+      <div class="buttonFilter">
+        <button mat-raised-button color="primary" (click)="buttonsAllGameFunction(games.id)">all
+          game
+        </button>
+      </div>
     </div>
-  </div>
 
+
+  </div>
 </div>
+
+<div *ngIf="!this.limitApi">
+  <div class="containerArrayGames" *ngFor="let games of gamesFilter">
+    <div class="buttonFilter">
+      <button mat-raised-button color="primary" (click)="apiLoad()">all
+        catégorie
+      </button>
+    </div>
+
+    <h1 class="gamesTitlle">{{games.name}}</h1>
+    <div class="containerGames">
+      <div routerLink="/game/{{game.slug}}" class="containerGame" *ngFor="let game of games.games">
+        <img [src]="game.thumbnailCover">
+        <h2 class="gameName">{{game.name}} {{game.price}}€</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
