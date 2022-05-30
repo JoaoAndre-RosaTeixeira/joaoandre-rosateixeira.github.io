@@ -8,6 +8,7 @@ import {FormUserComponent} from "./form-user/form-user.component";
 import {RpgComponent} from "./rpg-game/rpg/rpg.component";
 import {HomeComponent} from "./totogame/pages/home/home.component";
 import {GameComponent} from "./totogame/pages/game/game.component";
+import {CreateAccountComponent} from "./totogame/form/create-account/create-account.component";
 
 const routes: Routes = [
   { path: 'chess', component: ChessGameComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'form/user', component: FormUserComponent },
   { path: 'rpg', component: RpgComponent },
   { path: 'totogame', component: HomeComponent },
-  { path: 'game/:slug', component: GameComponent },
+  { path: 'totogame/game/:slug', component: GameComponent },
+  { path: 'totogame/createAccount/', component: CreateAccountComponent },
 ];
 
 @NgModule({

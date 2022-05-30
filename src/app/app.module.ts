@@ -10,13 +10,14 @@ import { RegionsIndexComponent } from './regions-index/regions-index.component';
 import { DepartementsRegionComponent } from './departements-region/departements-region.component';
 import { CommunesDepartementComponent } from './communes-departement/communes-departement.component';
 import { BreadCrumbsGeoApiComponent } from './bread-crumbs-geo-api/bread-crumbs-geo-api.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormUserComponent } from './form-user/form-user.component';
 import { RpgComponent } from './rpg-game/rpg/rpg.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './totogame/pages/home/home.component';
 import { GameComponent } from './totogame/pages/game/game.component';
+import { CreateAccountComponent } from './totogame/form/create-account/create-account.component';
 
 
 
@@ -33,6 +34,7 @@ import { GameComponent } from './totogame/pages/game/game.component';
     RpgComponent,
     HomeComponent,
     GameComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { GameComponent } from './totogame/pages/game/game.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
