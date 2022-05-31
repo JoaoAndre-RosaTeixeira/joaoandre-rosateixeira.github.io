@@ -1,38 +1,50 @@
 
-$size-board: 640px;
-
-.chess-board {
-  width: $size-board;
-  height: $size-board;
-
-  .case {
-    width: calc(#{$size-board}/8);
-    height: calc(#{$size-board}/8);
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-
-    > img {
-      width: 100%;
-      object-fit: contain;
-    }
-
-  }
-
-}
-
 .black {
-  background-color: #383838;
+  background-color: #232323;
 }
 
 .white {
   background-color: white;
 }
 
-.selected {
-  background-color: greenyellow;
+.clicked {
+  box-shadow: inset 0px 0px 10px 10px #2b5dad;
 }
 
-.available {
-  background-color: hotpink;
+.container {
+  width: 95vw;
+  height: 95vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
+
+.containerChess{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(8, minmax(15%, 4vw));
+  grid-template-rows: repeat(8,minmax(4vw, 3.5vh));
+
+  div{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  img {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .containerChess{
+    grid-template-columns: repeat(8, minmax(37%, 4vw));
+    grid-template-rows: repeat(8,minmax(13vw, 3.5vh));
+
+  }
+}
+

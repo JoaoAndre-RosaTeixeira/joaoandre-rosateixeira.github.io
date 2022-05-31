@@ -1,16 +1,14 @@
 
 import {Piece} from "./piece";
-import {Case} from "./case";
-import {Region} from "../geo-gouv/region";
 
 export class King extends Piece {
 
   constructor(color: string) {
-    super(color, '/assets/images/chess/king-' + color + '.png');
+    super('/assets/images/chess/king-' + color + '.png', color);
   }
 
-  move(initialCase: Case, board: Case[]): Case[] {
-    return [];
+  move(): void {
+    console.log('Move du roi !');
   }
 
 }

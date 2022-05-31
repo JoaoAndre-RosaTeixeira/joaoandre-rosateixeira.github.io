@@ -1,11 +1,10 @@
-import {Case} from "./case";
 
 export abstract class Piece {
 
   protected _image: string = '';
   private _color: string = '';
 
-  protected constructor(color: string, image: string) {
+  protected constructor(image: string, color: string) {
     this._image = image;
     this._color = color;
   }
@@ -18,6 +17,7 @@ export abstract class Piece {
     this._image = value;
   }
 
+
   get color(): string {
     return this._color;
   }
@@ -26,6 +26,6 @@ export abstract class Piece {
     this._color = value;
   }
 
-  abstract move(initialCase: Case, board: Case[]): Case[];
+  abstract move(): void;
 
 }

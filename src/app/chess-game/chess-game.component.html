@@ -1,22 +1,11 @@
-
 <div class="container">
-
-  <div class="d-sm-none d-md-block">
-    <div class="row chess-board">
-      <div class="case {{caseChess.color}}"
-           *ngFor="let caseChess of chessBoard.board"
-           (click)="chessBoard.move(caseChess)"
-           [class.selected]="caseChess.isSelected"
-           [class.available]="caseChess.availableMove"
-      >
-        <!-- ngIf ici va effectuer un truthy sur l'objet caseChess.piece -->
-        <img *ngIf="caseChess.piece" [src]="caseChess.piece.image">
-      </div>
+  <div class="containerChess">
+    <div  *ngFor="let caseChess of chessBoard.board"
+         [class]="caseChess.color"
+          (click)="move(caseChess)"
+          [class.clicked]="caseChess.clicked"
+    >
+      <img *ngIf="caseChess.piece!=undefined" [src]="caseChess.piece.image">
     </div>
   </div>
-
-  <div class="d-none d-sm-block d-md-none">
-    ACHETE TOI UN VRAI ECRAN
-  </div>
-
 </div>

@@ -10,7 +10,6 @@ import {King} from "./king";
 export class ChessBoard {
 
   private _board: Case[] = [];
-  private _tmpSelectedCase: Case|undefined;
 
   constructor() {
     let color: string = 'white';
@@ -51,33 +50,10 @@ export class ChessBoard {
         }
       }
     }
+    console.log(this._board);
   }
 
   get board(): Case[] {
     return this._board;
-  }
-
-  move(caseChess: Case): void {
-    // Activer la case sélectionnée + sauvegarde en tmp attribut de celle-ci
-    if (caseChess.piece && !this._tmpSelectedCase) {
-      this._tmpSelectedCase = caseChess;
-      this._tmpSelectedCase.isSelected = !this._tmpSelectedCase.isSelected;
-      caseChess.piece.move(caseChess, this.board);
-    } else if (this._tmpSelectedCase) {
-      // si ma case tmp existe && qu'elle n'est pas la case sur laquelle je viens de cliquer
-      if (this._tmpSelectedCase !== caseChess
-       && caseChess.piece?.color !== this._tmpSelectedCase.piece?.color
-      ) {
-        // on dit que la nouvelle case prend la piece de ma case tmp
-        caseChess.piece = this._tmpSelectedCase.piece;
-        // la case tmp n'a plus de piece && n'est plus sélectionnée
-        this._tmpSelectedCase.piece = undefined;
-      }
-      this.board.forEach((aCase) => {
-        aCase.availableMove = false;
-      });
-      this._tmpSelectedCase.isSelected = !this._tmpSelectedCase.isSelected;
-      this._tmpSelectedCase = undefined;
-    }
   }
 }

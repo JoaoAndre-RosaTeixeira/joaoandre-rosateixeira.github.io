@@ -2,15 +2,18 @@ import {Piece} from "./piece";
 
 export class Case {
 
-  private _isSelected: boolean = false;
-  private _availableMove: boolean = false;
+  private _x: number = 0;
+  private _y: number = 0;
+  private _color: string = '';
+  private _piece: Piece|undefined;
+  private _clicked: boolean = false
 
-  constructor(
-    private _x: number,
-    private _y: number,
-    private _color: string,
-    private _piece: Piece | undefined
-  ) { }
+  constructor(x: number, y: number, color: string, piece: Piece | undefined) {
+    this._x = x;
+    this._y = y;
+    this._color = color;
+    this._piece = piece;
+  }
 
   get x(): number {
     return this._x;
@@ -44,19 +47,11 @@ export class Case {
     this._piece = value;
   }
 
-  get isSelected(): boolean {
-    return this._isSelected;
+  get clicked(): boolean {
+    return this._clicked;
   }
 
-  set isSelected(value: boolean) {
-    this._isSelected = value;
-  }
-
-  get availableMove(): boolean {
-    return this._availableMove;
-  }
-
-  set availableMove(value: boolean) {
-    this._availableMove = value;
+  set clicked(value: boolean) {
+    this._clicked = value;
   }
 }

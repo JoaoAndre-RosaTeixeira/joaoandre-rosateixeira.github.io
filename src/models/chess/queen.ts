@@ -1,14 +1,14 @@
 
 import {Piece} from "./piece";
-import {Case} from "./case";
 
 export class Queen extends Piece {
 
   constructor(color: string) {
-    super(color, '/assets/images/chess/queen-' + color + '.png');
+    super('/assets/images/chess/queen-' + color + '.png', color);
   }
-  move(initialCase: Case, board: Case[]): Case[] {
-    return [];
+
+  move(): void {
+    console.log('Move de la reine !');
   }
 
 }
