@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'rpg', component: RpgComponent },
   { path: 'totogame', component: HomeComponent },
   { path: 'totogame/game/:slug', component: GameComponent },
-  { path: 'totogame/createAccount/', component: CreateAccountComponent },
+  { path: 'totogame/createAccount', component: CreateAccountComponent },
 ];
 
 @NgModule({

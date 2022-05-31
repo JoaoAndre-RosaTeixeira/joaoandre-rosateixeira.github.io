@@ -1,1 +1,60 @@
-<p>create-account works!</p>
+<form class="containerCreateAccountForm" [formGroup]="createAccountFormGroup">
+  <div class="CreateAccountForm">
+    <div>
+      <label>nom</label>
+      <input type="text"
+             class="form-control"
+             formControlName="name"
+             placeholder="nom"
+             [class.is-valid]="name.valid"
+             [class.is-invalid]="isFieldInvalid('name')"
+      >
+      <div *ngIf="(name.dirty || name.touched) && name.invalid" class="btnDanger">
+        <div *ngIf="name.errors?.required">
+          Le nom est obligatoire.
+        </div>
+        <div *ngIf="name.errors?.minLength">
+          Le nom doit faire au moins de caractères.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="CreateAccountForm">
+    <div>
+      <label>nickname</label>
+      <input type="text"
+             class="form-control"
+             formControlName="nickname"
+             placeholder="nickname"
+             [class.is-valid]="nickname.valid"
+             [class.is-invalid]="isFieldInvalid('nickname')"
+      >
+      <div *ngIf="(nickname.dirty || nickname.touched) && nickname.invalid" class="btnDanger">
+        <div *ngIf="nickname.errors?.required">
+          Le nickname est obligatoire.
+        </div>
+        <div *ngIf="name.errors?.minLength">
+          Le nickname doit faire au moins de caractères.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="CreateAccountForm">
+    <div>
+      <label>mail</label>
+      <input type="mail"
+             class="form-control"
+             formControlName="email"
+             placeholder="mail"
+             [class.is-valid]="mail.valid"
+             [class.is-invalid]="isFieldInvalid('email')"
+      >
+      <div *ngIf="(mail.dirty || mail.touched) && mail.invalid" class="btnDanger">
+        <div *ngIf="mail.errors?.required">
+          Le mail est obligatoire.
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="onSubmit()">ma bite</button>
+</form>

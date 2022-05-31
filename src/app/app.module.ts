@@ -18,6 +18,7 @@ import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './totogame/pages/home/home.component';
 import { GameComponent } from './totogame/pages/game/game.component';
 import { CreateAccountComponent } from './totogame/form/create-account/create-account.component';
+import { NewHeroComponent } from './totogame/form/new-hero/new-hero.component';
 
 
 
@@ -35,6 +36,7 @@ import { CreateAccountComponent } from './totogame/form/create-account/create-ac
     HomeComponent,
     GameComponent,
     CreateAccountComponent,
+    NewHeroComponent,
   ],
   imports: [
     BrowserModule,
