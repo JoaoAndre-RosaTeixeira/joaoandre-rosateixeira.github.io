@@ -1,0 +1,14 @@
+
+<div class="buttons">
+  <button mat-raised-button color="primary" *ngIf="pokeListButton" [disabled]="!pokeListButton.previous" (click)="apiLoad(pokeListButton.previous)" class="previous">previous</button>
+  <button mat-raised-button color="primary" *ngIf="pokeListButton" [disabled]="!pokeListButton.next" (click)="apiLoad(pokeListButton.next)" class="next">next</button>
+</div>
+<div class="containerPokemons">
+  <div class="pokemons">
+    <mat-card class="pokemon" *ngFor="let pokemon of pokeList">
+      <mat-card-subtitle>Pokedex N°{{pokemon.id}}</mat-card-subtitle>
+      <img mat-card-image class="pkmImg" [src]="pokemon.sprites.other['official-artwork'].front_default">
+      <div mat-card-subtitle class="pkmName">{{pokemon.name|titlecase}}</div>
+    </mat-card>
+  </div>
+</div>

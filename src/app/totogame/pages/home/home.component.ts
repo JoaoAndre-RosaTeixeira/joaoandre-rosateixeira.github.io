@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   gamesPrices: Game[] = [];
   gamesPublishedAt: Game[] = [];
   gamesFilter: GamesList[] = [];
+  games: GamesList[] = [];
 
   constructor(private httpService: HttpClientService) {
   }
@@ -26,9 +27,7 @@ export class HomeComponent implements OnInit {
   buttonsAllGameFunction(id:number){
     this.limitApi = !this.limitApi
     this.gamesFilter = [];
-    console.log(id)
-    console.log(this)
-    console.log(event)
+    this.games = [];
     if ( id === 1){
       this.apiLoadPublishedAt()
     } else if ( id === 2){
@@ -36,25 +35,24 @@ export class HomeComponent implements OnInit {
     } else if (id === 3){
       this.apiLoadName()
     }
+    this.games = this.gamesFilter
   }
 
   apiLoad(){
     this.gamesFilter = [];
+    this.games = [];
     this.limitApi = !this.limitApi
     this.apiLoadPublishedAt()
     this.apiLoadPrice()
     this.apiLoadName()
-    console.log(this.gamesFilter)
-    this.gamesFilter.sort(function compare(a, b) {
-      if (a.id < b.id)
-        return -1;
-      if (a.id > b.id )
-        return 1;
-      return 0;
-    });
-    console.log(this.gamesFilter)
-  }
+    this.games = this.gamesFilter
 
+  }
+  apiSort(){
+  this.gamesFilter.sort(function (a, b) {
+    return a.id - b.id;
+  });
+  }
 
 
   apiLimit(): number {
@@ -70,6 +68,7 @@ export class HomeComponent implements OnInit {
       this.gamesPublishedAt = json.items;
       this._totalApiResponse = json.total
       this.gamesFilter.push({games: this.gamesPublishedAt, name: 'Les dernières sorties', id: 1});
+      this.apiSort()
     });
   }
 
@@ -77,6 +76,7 @@ export class HomeComponent implements OnInit {
     this.httpService.getRequest<RequestApiPaginate<Game>>(sprintf(TotogameAPI.urlGameFilter, 'price', 'desc', this.apiLimit())).subscribe((json) => {
       this.gamesPrices = json.items;
       this.gamesFilter.push({games: this.gamesPrices, name: 'Les meilleures ventes', id: 2});
+      this.apiSort()
     });
   }
 
@@ -84,6 +84,7 @@ export class HomeComponent implements OnInit {
     this.httpService.getRequest<RequestApiPaginate<Game>>(sprintf(TotogameAPI.urlGameFilter, 'name', 'asc', this.apiLimit())).subscribe((json) => {
       this.gamesAlpha = json.items;
       this.gamesFilter.push({games: this.gamesAlpha, name: 'Les jeux', id: 3});
+      this.apiSort()
     });
   }
 

@@ -1,0 +1,38 @@
+.containerPokemons {
+  width: 100vw;
+  height: 100vh;
+  .pokemons{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 6rem;
+    .pokemon{
+      img{
+        width: 25rem;
+        height: 25rem;
+        object-fit: contain;
+      }
+      .pkmName{
+        text-align: center;
+        font-size: 2rem;
+
+      }
+      &:hover{
+        transform: scale(1.23, 1.18);
+      }
+    }
+  }
+}
+.buttons{
+  margin: 3%;
+  display: grid;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  button{
+    &:hover{
+      transform: scale(1.1, 1.1);
+    }
+  }
+}

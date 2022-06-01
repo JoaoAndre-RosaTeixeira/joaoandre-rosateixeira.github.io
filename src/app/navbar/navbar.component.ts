@@ -16,6 +16,7 @@ export class NavbarComponent {
     'Regions',
     'rpg',
     'totogame',
+    'pokemon',
   ];
 
   constructor(public router: Router) { }

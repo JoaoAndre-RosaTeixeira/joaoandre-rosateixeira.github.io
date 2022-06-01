@@ -3,14 +3,25 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <div class="navbar-nav">
-        <a class="nav-link"
-           *ngFor="let url of urlsRoute"
-           routerLink="/{{ url|lowercase }}"
-           [class.active]="router.url === '/' + url.toLowerCase()"
-        >
-          {{ url }}
-        </a>
+        <div class="containerPortfolio">
+          <button class="buttonPortfolio" mat-raised-button >portfolio</button>
+          <div class="portfolio">
+            <a      *ngFor="let url of urlsRoute"
+                    routerLink="/{{ url|lowercase }}"
+                    [class.active]="router.url === '/' + url.toLowerCase()"
+            >
+              <button mat-raised-button>
+                {{ url }}
+              </button>
+            </a>
+          </div>
+
+        </div>
+
       </div>
+
     </div>
+
   </nav>
+
 </header>

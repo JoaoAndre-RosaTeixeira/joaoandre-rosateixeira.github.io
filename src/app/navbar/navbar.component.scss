@@ -3,4 +3,34 @@
   text-decoration: underline;
 }
 
+.portfolio {
+  display: none;
+}
 
+.containerPortfolio {
+  position: relative;
+}
+
+.buttonPortfolio:hover, .portfolio button:hover {
+  background-color: #663ab7;
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+
+.containerPortfolio:hover {
+  .portfolio {
+    display: grid;
+    position: absolute;
+    width: max-content;
+    color: white;
+    padding: 0.5rem;
+    margin-left: -0.5rem;
+    gap: 0.5rem;
+
+    a {
+      display: grid;
+      justify-content: center;
+      text-decoration: none;
+    }
+  }
+}

@@ -19,7 +19,8 @@ import { HomeComponent } from './totogame/pages/home/home.component';
 import { GameComponent } from './totogame/pages/game/game.component';
 import { CreateAccountComponent } from './totogame/form/create-account/create-account.component';
 import { NewHeroComponent } from './totogame/form/new-hero/new-hero.component';
-
+import { HomePokemonComponent } from './pokemon/pages/home/home.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { NewHeroComponent } from './totogame/form/new-hero/new-hero.component';
     GameComponent,
     CreateAccountComponent,
     NewHeroComponent,
+    HomePokemonComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,8 @@ import { NewHeroComponent } from './totogame/form/new-hero/new-hero.component';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatCardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
