@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "43664c3f-80c0-4d2e-92fd-61603b0bb34b"
+    "analytics": "8b354536-8072-47ca-896e-40a5f7c3febe"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-cv": {
+    "aformaccdaprojekt": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-cv",
+            "outputPath": "dist/aformaccdaprojekt",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-cv:build:production"
+              "browserTarget": "aformaccdaprojekt:build:production"
             },
             "development": {
-              "browserTarget": "my-cv:build:development"
+              "browserTarget": "aformaccdaprojekt:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-cv:build"
+            "browserTarget": "aformaccdaprojekt:build"
           }
         },
         "test": {
@@ -112,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "my-cv"
+  "defaultProject": "aformaccdaprojekt"
 }
