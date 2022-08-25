@@ -10,6 +10,8 @@ import {HomeComponent} from "./totogame/pages/home/home.component";
 import {GameComponent} from "./totogame/pages/game/game.component";
 import {CreateAccountComponent} from "./totogame/form/create-account/create-account.component";
 import {HomePokemonComponent} from "./pokemon/pages/home/home.component";
+import {HomeCVComponent} from "./homeCV/home-cv/home-cv.component";
+import {CompetencesCVComponent} from "./homeCV/competences-cv/competences-cv.component";
 
 const routes: Routes = [
   { path: 'chess', component: ChessGameComponent },
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'totogame/game/:slug', component: GameComponent },
   { path: 'totogame/createAccount', component: CreateAccountComponent },
   { path: 'pokemon', component: HomePokemonComponent },
+  { path: '', component: HomeCVComponent },
+  { path: 'competences', component: CompetencesCVComponent },
 ];
 
 @NgModule({

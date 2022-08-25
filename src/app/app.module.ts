@@ -21,6 +21,8 @@ import { CreateAccountComponent } from './totogame/form/create-account/create-ac
 import { NewHeroComponent } from './totogame/form/new-hero/new-hero.component';
 import { HomePokemonComponent } from './pokemon/pages/home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import { HomeCVComponent } from './homeCV/home-cv/home-cv.component';
+import { CompetencesCVComponent } from './homeCV/competences-cv/competences-cv.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import {MatCardModule} from '@angular/material/card';
     GameComponent,
     CreateAccountComponent,
     NewHeroComponent,
-    HomePokemonComponent
+    HomePokemonComponent,
+    HomeCVComponent,
+    CompetencesCVComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,13 @@
 .portfolio {
   display: none;
 }
-
+.navbar-nav{
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1rem;
+}
 .containerPortfolio {
   position: relative;
 }
@@ -18,6 +24,7 @@
 }
 
 .containerPortfolio:hover {
+
   .portfolio {
     display: grid;
     position: absolute;
@@ -26,11 +33,13 @@
     padding: 0.5rem;
     margin-left: -0.5rem;
     gap: 0.5rem;
+    z-index: 5;
 
     a {
       display: grid;
       justify-content: center;
       text-decoration: none;
+
     }
   }
 }

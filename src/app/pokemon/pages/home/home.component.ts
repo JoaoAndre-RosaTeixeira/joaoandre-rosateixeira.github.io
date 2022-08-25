@@ -36,13 +36,11 @@ export class HomePokemonComponent implements OnInit {
         });
       })
     });
-
   }
 
 
   ngOnInit(): void {
     this.apiLoad(undefined)
-
   }
 
   get pokeList(): Array<IPokemon> {
