@@ -1,0 +1,20 @@
+<div class=background>
+  <div class=cadreCompetences >
+
+    <ul class=textCompetences *ngFor="let userCompetence of usercv.competences">
+
+      <p class=titreCompetences>
+        {{usercv.competences[usercv.competences.indexOf(userCompetence)].title}}
+      </p>
+
+      <div class=videoCadre >
+        <video class=videoChauffeur autoplay [muted]="'muted'" loop>
+          <source [src]="usercv.competences[usercv.competences.indexOf(userCompetence)].video" type="video/mp4" >
+        </video>
+      </div>
+      <li *ngFor="let competence of usercv.competences[usercv.competences.indexOf(userCompetence)].competences">{{competence}}</li>
+
+
+    </ul>
+  </div>
+</div>

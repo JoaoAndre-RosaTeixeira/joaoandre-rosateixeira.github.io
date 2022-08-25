@@ -1,0 +1,92 @@
+
+<div class=background>
+  <div class="cadreInfo">
+    <div class="moicadre">
+      <img class="moihey" src="../../../assets/images/cv/moihey.jpg">
+      <img class="moi" src="../../../assets/images/cv/moi.jpg">
+    </div>
+    <div class="cadreText">
+      <div class="salut">
+        Salut
+        <span>
+					</span>
+      </div>
+      Je suis
+      <div class="cadreTextNom">
+        {{usercv.firstName}} {{usercv.lastName}}
+      </div>
+      <ul class="coordonné">
+        <li> Age :
+          <Span> {{usercv.age}} </Span>
+        </li>
+        <li> Adresse :
+          <Span> {{usercv.adresse}} </Span>
+        </li>
+        <li> E-mail :
+          <Span> {{usercv.email}} </Span>
+        </li>
+        <li> Télèphone :
+          <Span> {{usercv.number}}</Span>
+        </li>
+        <li> Permis :
+          <Span> {{usercv.permis}} </Span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div style="text-align: center" class="reseauxsociaux">
+
+    <a href="mailto:joao63430@gmail.com">
+      <button mat-raised-button >
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </button>
+    </a>
+    <a href="https://www.linkedin.com/in/joao-andr%C3%A9-rosa-teixeira-45600019a/">
+      <button mat-raised-button >
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </button>
+    </a>
+    <a href="https://www.instagram.com/jo_teixeira63/">
+      <button mat-raised-button >
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </button>
+    </a>
+
+  </div>
+  <div class="downloadCv">
+    <a [href]="usercv.dowloadableCv" download="CV-CDA-2021.pdf">
+      <button mat-raised-button color="primary">Telecharger mon CV</button>
+    </a>
+    <!-- <img src="/asset/image/yey.gif"></img>  -->
+  </div>
+
+  <div class="presentation">
+    <h4>Je m’appelle {{usercv.firstName}} {{usercv.lastName}}, j’ai 29ans,<br>
+    </h4>
+    Ayant toujours été un passionné d’informatique j’ai toujours voulu apprendre à programmer et travailler
+    dedans. Malheureusement une mauvaise orientation à fait que je n’ai pas eu accès à ce genre d’études avant
+    aujourd’hui.
+    <br><br>
+    A ce jour suite à de nombreux emplois je reprends les études afin d’atteindre mon objectif principal qui est
+    devenir programmateur en informatique.
+    Pour ce qui est du métier en lui-même je n’ai aucun doute, dès que cela touche à de l’informatique je peux
+    passer des jours pencher dessus tant que je n’ai pas terminé mon projet.
+    Lors de mes anciens emplois et même formations j’étais toujours celui qui venais résoudre les petits
+    problèmes.
+    <br><br>
+    Pour ce qui est de la programmation en elle-même je m’y suis essayé pendant une courte période il y a
+    quelques années sur Algobox et une programmation pour jeu sur un niveau assez basique, c’est-à-dire la
+    création d’une porte des étoiles entièrement fonctionnelle qui menait d’un point A à un point B.
+    <br><br>
+    Je pense avoir toutes les qualités requises pour ce métier par ma patience, rigueur, autonomie, curiosité,
+    le désir de toujours faire mieux.
+    <br><br>
+    Si je me lance aujourd’hui c’est par l’envie d’apprendre, d’évolution et pour réaliser ma passion
+    Dans un contexte plus personnel je souhaite également apprendre la programmation en informatique et
+    électronique pour des projets personnels.
+
+  </div>
+
+
+</div>
