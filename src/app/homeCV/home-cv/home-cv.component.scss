@@ -1,7 +1,5 @@
 
-.navBackground {
-  min-width: 600px;
-  max-width: 1000px;
+.background {
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
@@ -14,28 +12,6 @@
   box-shadow: 0 1px 6px rgb(0 0 0 / 12%), 0 1px 4px rgb(0 0 0 / 24%);
 }
 
-.barreNav {
-  text-align: center;
-  height: 45px;
-  font-size: 0px;
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
-}
-
-.buttonnav {
-  text-align: left;
-  margin-top: -5px;
-  font-size: 20px;
-  width: 140px;
-  padding-bottom: 30px;
-  border: solid rgb(255, 255, 255);
-  background-color: rgb(224, 112, 112);
-  transition: transform 0.3s;
-}
-
-.buttonnav:hover {
-  transform: translatey(-35px);
-}
 
 .cadreInfo {
   display: table;
