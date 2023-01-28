@@ -25,8 +25,6 @@ import { HomeCVComponent } from './homeCV/home-cv/home-cv.component';
 import { CompetencesCVComponent } from './homeCV/competences-cv/competences-cv.component';
 import { PenduHtmlComponent } from './pendu-html/pendu-html.component';
 import { RpgProject2DComponent } from './rpg-project2-d/rpg-project2-d.component';
-import { Database } from 'database.config';
-
 
 @NgModule({
   declarations: [
@@ -60,7 +58,7 @@ import { Database } from 'database.config';
     ReactiveFormsModule,
 
   ],
-  providers: [Database],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
