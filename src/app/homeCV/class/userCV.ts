@@ -6,22 +6,26 @@ export class UserCV {
   private _firstName: string = 'Rosa Teixeira';
   private _lastName: string = 'Joao André';
   private _birthdate: Date = new Date(1992, 1, 11, 23,35,0)
-  private _age: number =0;
   private _email: string = "joao63430@gmail.com"
-  private _linkedin: string = "https://www.linkedin.com/in/joao-andr%C3%A9-rosa-teixeira-45600019a/"
-  private _instagram: string = "https://www.instagram.com/jo_teixeira63/"
+  private _linkedin: string = "https://www.linkedin.com/in/joao-andr%C3%A9-rosa-teixeira-dev-ia/"
+  private _instagram: string = "https://www.instagram.com/jo_teixeira63"
 
   private _adresse: string = "2 rue Emile Zola, 63430 Pont-du-Château"
   private _number: string = "06 23 18 71 92"
   private _permis: Array<string> = ["B", "C", "CE", "A2"];
   private _dowloadableCv: string = "../../../assets/documents/CV-CDA-2021.pdf";
+  private _dowloadableRPG: string = "../../../assets/documents/newbie.rar";
+
+  private _age: number =0;
+
+
   private _competences: Array<ICompetences> = [
     {
       title: "Mes competences en informatique :",
       video: "../../../assets/videos/cv/programmation.mp4",
       competences: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "Python", "PHP", "SQL", "Symphony", "Angular", "Visual Studio", "Php Storm",
         "Savoir se servir des outils en informatique", "Détection et résolution de panne",
-        "Utilisation de systeme de recherche", "Autodidacte"]
+        "Utilisation de systeme de recherche", "Autodidacte", "Figma"]
     },
     {
       title: "Mes competences chauffeur :",
@@ -36,8 +40,7 @@ export class UserCV {
   private _experiences: Array<IExperiences> = [
     {
       title: "Mes Experiences informatique :",
-      competences: ["2014 - un peu de Javascript pour la programmation d'une porte des étoiles Entièrement\n" +
-      "\t\t\t\t\tfonctionnelle dans Minecraft", "2021 - 2022 - Formation de Concepteur Dévellopeur d'Applications", "2021 - Création de mon site CV"]
+      competences: ["2021 - 2022 - Formation de Concepteur Dévellopeur d'Applications", "2021 - Création de mon site CV", "2022 - programmation rpg 2D", "2022 - Création d'application", "2021 - projet tutoré création de site web", "2021 - stage 3 semaine en entreprise"]
     },
     {
       title: "Mes expériences en général :",
@@ -50,32 +53,31 @@ export class UserCV {
       ]
     }
   ]
-  private _motivationLetter: string =
-    "Ayant toujours été un passionné d'informatique, j’ai toujours voulu apprendre à programmer et travailler dedans. Malheureusement, une mauvaise orientation à fait que je n’ai pas eu accès à ce genre d’études avant aujourd’hui.\n" +
-    "\n" +
-    "À ce jour, suite à de nombreux emplois, je reprends les études afin d’atteindre mon objectif principal qui est de devenir programmateur en informatique. Pour ce qui est du métier en lui-même, je n’ai aucun doute, dès que cela touche à de l'informatique, je peux passer des jours pencher dessus tant que je n’ai pas terminé mon projet. Lors de mes anciens emplois et même formations, j’étais toujours celui qui venait résoudre les petits problèmes.\n" +
-    "\n" +
-    "Pour ce qui est de la programmation en elle-même, je m’y suis essayé pendant une courte période il y a quelques années sur Algobox et une programmation pour jeu sur un niveau assez basique, c’est-à-dire la création d’une porte des étoiles entièrement fonctionnelle qui menait d’un point A à un point B.\n" +
-    "\n" +
-    "Je pense avoir toutes les qualités requises pour ce métier par ma patience, rigueur, autonomie, curiosité, le désir de toujours faire mieux.\n" +
-    "\n" +
-    "Si je me lance aujourd’hui c’est par l’envie d’apprendre, d’évolution et pour réaliser ma passion Dans un contexte plus personnel je souhaite également apprendre la programmation en informatique et électronique pour des projets personnels."
+  private _motivationLetter: Array<string> =
+    [
+      "Je m'appelle " + this.firstName +" " + this.lastName + ", j'ai "+ this.age +" ans,\n" ,
+      "Ayant toujours été passionné d'informatique, j'ai toujours voulu apprendre à programmer et travailler dedans.\n",
+      "Aujourd'hui, suite à de nombreux emplois, j'ai repris les études afin d'atteindre mon objectif principal qui est de devenir programmeur.\n",
+      "Je pense aujourd'hui avoir toutes les qualités requises pour ce métier par ma patience, rigueur, autonomie, curiosité et le désir de toujours faire mieux.\n",
+      "Si je me lance aujourd'hui c'est par l'envie d'apprendre, d'évolution et pour réaliser ma passion. Je souhaite également apprendre la programmation et l'électronique pour des projets personnels.\n" ,
+      "Fort de ma première formation, je désire aujourd'hui continuer d'apprendre et d'évoluer dans ce domaine qui me passionne.\n"]
 
 
   constructor() {
-    if(this.birthdate){
-      let timeDiff = Math.abs(Date.now() - this.birthdate);
-      //Used Math.floor instead of Math.ceil
-      //so 26 years and 140 days would be considered as 26, not 27.
-      this.age = Math.floor((timeDiff / (1000 * 3600 * 24))/365);
-
+    this.birthdate = new Date(1992, 1, 11);
+    const today = new Date();
+    this.age = today.getFullYear() - this.birthdate.getFullYear();
+    const ageDate = new Date(today.getFullYear(), this.birthdate.getMonth(), this.birthdate.getDate());
+    if (today < ageDate) {
+      this.age--;
     }
   }
-  get motivationLetter(): string {
+
+  get motivationLetter(): Array<string> {
     return this._motivationLetter;
   }
 
-  set motivationLetter(value: string) {
+  set motivationLetter(value: Array<string>) {
     this._motivationLetter = value;
   }
 
@@ -104,12 +106,14 @@ export class UserCV {
   }
 
   get age(): any {
-    return this._age
+    let timeDiff = Math.abs(Date.now() - this.birthdate);
+    return Math.floor((timeDiff / (1000 * 3600 * 24))/364.25);
   }
 
   set age(value: number) {
     this._age = value;
   }
+
 
   get email(): string {
     return this._email;
@@ -146,6 +150,11 @@ export class UserCV {
   get dowloadableCv(): string {
     return this._dowloadableCv;
   }
+
+  get dowloadableRPG(): string {
+    return this._dowloadableRPG;
+  }
+
 
   set dowloadableCv(value: string) {
     this._dowloadableCv = value;

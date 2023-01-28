@@ -1,0 +1,107 @@
+@font-face {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+
+.titre {
+  margin: auto;
+  height: 10rem;
+  width: 60%;
+  min-width: 270px;
+  background-color: #8a8a8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.containerPenduGame {
+
+  .containerWord {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .containerWord .inputWord {
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  .containerWord div {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P", cursive;
+    background-color: pink;
+  }
+
+  .containerPendu {
+    margin: 50px auto;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+  }
+
+  .containerPendu .key {
+    width: 80px;
+    height: 80px;
+    background-color: #5fe7ff;
+    border-radius: 10px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  .containerPendu .keyDie {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(167, 10, 10, 0.445);
+    border-radius: 10px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: "Press Start 2P", cursive;
+    transform: rotate(45deg);
+    transition: 2s;
+  }
+
+  .sayoriPendu {
+    position: fixed;
+    top: 57vh;
+  }
+
+  .sayori {
+    position: fixed;
+    top: 47vh;
+    left: 80vw;
+  }
+
+}
+
+
+/*# sourceMappingURL=index.css.map */

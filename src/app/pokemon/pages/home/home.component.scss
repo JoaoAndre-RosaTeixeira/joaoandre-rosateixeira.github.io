@@ -2,21 +2,21 @@
   width: 100vw;
   height: 100vh;
   .pokemons{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 15rem));
     justify-content: center;
     align-items: center;
     gap: 3rem;
     padding-bottom: 6rem;
     .pokemon{
       img{
-        width: 25rem;
-        height: 25rem;
+        width: 100%;
         object-fit: contain;
       }
       .pkmName{
         text-align: center;
         font-size: 2rem;
+        overflow-wrap: break-word;
 
       }
       &:hover{

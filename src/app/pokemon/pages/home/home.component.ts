@@ -23,7 +23,7 @@ export class HomePokemonComponent implements OnInit {
   apiLoad(value: string | undefined) {
     this._pokeList = []
     if (value === undefined) {
-      value = PokemonAPI.url("pokemon")
+      value = PokemonAPI.url("pokemon?limit=25")
     }
     this.httpService.getRequest<PokemonsApi<BasePokemon>>(sprintf(value)).subscribe((json) => {
       this._pokeListButton = json

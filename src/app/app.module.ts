@@ -15,14 +15,17 @@ import { FormUserComponent } from './form-user/form-user.component';
 import { RpgComponent } from './rpg-game/rpg/rpg.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './totogame/pages/home/home.component';
 import { GameComponent } from './totogame/pages/game/game.component';
 import { CreateAccountComponent } from './totogame/form/create-account/create-account.component';
 import { NewHeroComponent } from './totogame/form/new-hero/new-hero.component';
 import { HomePokemonComponent } from './pokemon/pages/home/home.component';
-import {MatCardModule} from '@angular/material/card';
 import { HomeCVComponent } from './homeCV/home-cv/home-cv.component';
 import { CompetencesCVComponent } from './homeCV/competences-cv/competences-cv.component';
+import { PenduHtmlComponent } from './pendu-html/pendu-html.component';
+import { RpgProject2DComponent } from './rpg-project2-d/rpg-project2-d.component';
+import { Database } from 'database.config';
 
 
 @NgModule({
@@ -42,7 +45,9 @@ import { CompetencesCVComponent } from './homeCV/competences-cv/competences-cv.c
     NewHeroComponent,
     HomePokemonComponent,
     HomeCVComponent,
-    CompetencesCVComponent
+    CompetencesCVComponent,
+    PenduHtmlComponent,
+    RpgProject2DComponent
   ],
   imports: [
     BrowserModule,
@@ -51,11 +56,11 @@ import { CompetencesCVComponent } from './homeCV/competences-cv/competences-cv.c
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    ReactiveFormsModule,
     MatCardModule,
+    ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [Database],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

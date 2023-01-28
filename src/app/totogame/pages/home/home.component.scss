@@ -87,7 +87,7 @@ body {
     margin-bottom: 20rem;
     .containerGames {
       display: grid;
-      grid-template-columns: repeat(1, auto);
+      grid-template-columns: repeat(1, minmax(15rem, auto));
     }
   }
 

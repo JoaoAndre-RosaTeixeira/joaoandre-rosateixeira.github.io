@@ -12,6 +12,7 @@ import {CreateAccountComponent} from "./totogame/form/create-account/create-acco
 import {HomePokemonComponent} from "./pokemon/pages/home/home.component";
 import {HomeCVComponent} from "./homeCV/home-cv/home-cv.component";
 import {CompetencesCVComponent} from "./homeCV/competences-cv/competences-cv.component";
+import {PenduHtmlComponent} from "./pendu-html/pendu-html.component";
 
 const routes: Routes = [
   { path: 'chess', component: ChessGameComponent },
@@ -27,6 +28,8 @@ const routes: Routes = [
   { path: 'pokemon', component: HomePokemonComponent },
   { path: '', component: HomeCVComponent },
   { path: 'competences', component: CompetencesCVComponent },
+  { path: 'pendu', component: PenduHtmlComponent},
+
 ];
 
 @NgModule({

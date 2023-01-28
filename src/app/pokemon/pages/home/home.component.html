@@ -11,4 +11,8 @@
       <div mat-card-subtitle class="pkmName">{{pokemon.name|titlecase}}</div>
     </mat-card>
   </div>
+  <div class="buttons">
+    <button mat-raised-button color="primary" *ngIf="pokeListButton" [disabled]="!pokeListButton.previous" (click)="apiLoad(pokeListButton.previous)" class="previous">previous</button>
+    <button mat-raised-button color="primary" *ngIf="pokeListButton" [disabled]="!pokeListButton.next" (click)="apiLoad(pokeListButton.next)" class="next">next</button>
+  </div>
 </div>

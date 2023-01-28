@@ -4,26 +4,22 @@
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
-  display: table;
   width: 70%;
-  height: 100vh;
-  background-size: cover;
   background-color: rgba(255, 255, 255);
-  overflow: hidden;
   box-shadow: 0 1px 6px rgb(0 0 0 / 12%), 0 1px 4px rgb(0 0 0 / 24%);
 }
 
 
 .cadreInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   margin-left: auto;
   margin-right: auto;
+  margin-top: 60px;
   background-color: rgb(255, 255, 255);
 }
 
-.cadreText {
-  margin-top: -215px;
-  margin-left: 280px;
-}
+
 
 
 .salut {
@@ -71,7 +67,6 @@
 .coordonné {
   font-weight: 700;
   list-style: none;
-
 }
 
 .coordonné span {
@@ -99,14 +94,13 @@
 
 .reseauxsociaux {
   height: max-content;
-  padding: 10px;
+  padding: 2rem;
   width: 100%;
   background-color: rgba(224, 112, 112);
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   justify-content: center;
   align-items: center;
-  grid-auto-flow: column;
-  gap: 2rem;
 
   button {
 
@@ -197,6 +191,8 @@
 .downloadCv {
   margin-top: 2rem;
   display: grid;
+  grid-template-columns: repeat(auto-fit, 10rem);
+
   justify-content: center;
 }
 
@@ -271,4 +267,9 @@
   margin-top: -50px;
 }
 
+@media (max-width: 40rem) {
 
+  .background {
+    width: 100%;
+  }
+}
