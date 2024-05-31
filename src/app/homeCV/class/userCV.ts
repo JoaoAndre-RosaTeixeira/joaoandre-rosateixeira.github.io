@@ -53,14 +53,18 @@ export class UserCV {
       ]
     }
   ]
-  private _motivationLetter: Array<string> =
-    [
-      "Je m'appelle " + this.firstName +" " + this.lastName + ", j'ai "+ this.age +" ans,\n" ,
-      "Ayant toujours été passionné d'informatique, j'ai toujours voulu apprendre à programmer et travailler dedans.\n",
-      "Aujourd'hui, suite à de nombreux emplois, j'ai repris les études afin d'atteindre mon objectif principal qui est de devenir programmeur.\n",
-      "Je pense aujourd'hui avoir toutes les qualités requises pour ce métier par ma patience, rigueur, autonomie, curiosité et le désir de toujours faire mieux.\n",
-      "Si je me lance aujourd'hui c'est par l'envie d'apprendre, d'évolution et pour réaliser ma passion. Je souhaite également apprendre la programmation et l'électronique pour des projets personnels.\n" ,
-      "Fort de ma première formation, je désire aujourd'hui continuer d'apprendre et d'évoluer dans ce domaine qui me passionne.\n"]
+ private _motivationLetter: Array<string> =
+  [
+    "Bonjour à tous,\n",
+    "Je m'appelle " + this.firstName + " " + this.lastName + ", j'ai " + this.age + " ans.\n",
+    "Passionné par l'informatique depuis toujours, j'ai appris à programmer et à développer mes compétences au fil des années.\n",
+    "Après avoir travaillé dans plusieurs domaines, j'ai repris mes études pour atteindre mon objectif principal : devenir développeur.\n",
+    "Aujourd'hui, grâce à des formations en Conception et Développement d'Applications ainsi qu'en Intelligence Artificielle, j'ai pu acquérir des compétences variées et solides.\n",
+    "J'ai eu la chance de travailler chez Exakis et Engie IT à Lyon, où j'ai développé une page d'actualités sur le versionning d'applications avec .NET et Vue.js 3.\n",
+    "Je pense avoir toutes les qualités requises pour ce métier : patience, rigueur, autonomie, curiosité, et le désir de toujours m'améliorer.\n",
+    "Je suis actuellement à la recherche d'un nouveau poste en développement web ou full stack, disponible à partir du 31 juillet.\n",
+    "Merci d’avance pour toutes les mises en relation, les conseils ou les offres que vous pouvez partager.\n",
+  ]
 
 
   constructor() {
