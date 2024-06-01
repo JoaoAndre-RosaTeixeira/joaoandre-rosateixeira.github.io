@@ -10,8 +10,8 @@ export class UserCV {
   private _linkedin: string = "https://www.linkedin.com/in/joao-andr%C3%A9-rosa-teixeira-dev-ia/"
   private _instagram: string = "https://www.instagram.com/jo_teixeira63"
 
-  private _adresse: string = "2 rue Emile Zola, 63430 Pont-du-Château"
-  private _number: string = "06 23 18 71 92"
+  private _adresse: string = "13 rue Montaigne, 69670 Vaugneray"
+  private _number: string = "06 95 29 41 47"
   private _permis: Array<string> = ["B", "C", "CE", "A2"];
   private _dowloadableCv: string = "../../../assets/documents/CV-JART-2024.pdf";
   private _dowloadableRPG: string = "../../../assets/documents/newbie.rar";
