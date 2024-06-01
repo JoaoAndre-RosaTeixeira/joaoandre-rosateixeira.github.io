@@ -15,7 +15,6 @@ export class UserCV {
   private _permis: Array<string> = ["B", "C", "CE", "A2"];
   private _dowloadableCv: string = "../../../assets/documents/CV-CDA-2021.pdf";
   private _dowloadableRPG: string = "../../../assets/documents/newbie.rar";
-
   private _age: number =0;
 
 

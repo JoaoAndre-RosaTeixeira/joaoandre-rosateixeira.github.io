@@ -114,7 +114,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://joaoandre-rosateixeira.github.io/",
+            "repo": "https://github.com/JoaoAndre-RosaTeixeira/joaoandre-rosateixeira.github.io.git"
+          }
         }
       }
     }
