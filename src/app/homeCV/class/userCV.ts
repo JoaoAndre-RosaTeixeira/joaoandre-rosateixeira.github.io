@@ -23,7 +23,7 @@ export class UserCV {
     {
       title: "Mes competences en informatique :",
       video: "../../../assets/videos/cv/programmation.mp4",
-      competences: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "Python", "PHP", "SQL", "Symphony", "Angular", "Visual Studio", "Php Storm",
+      competences: ["HTML", "CSS", "SCSS", "JavaScript", "C#", "TypeScript", "Python", "PHP", "SQL", "DotNet", "vueJs", "Symphony", "Angular", "Visual Studio", "Php Storm",
         "Savoir se servir des outils en informatique", "Détection et résolution de panne",
         "Utilisation de systeme de recherche", "Autodidacte", "Figma"]
     },
@@ -65,7 +65,6 @@ export class UserCV {
     "Je suis actuellement à la recherche d'un nouveau poste en développement web ou full stack, disponible à partir du 31 juillet.\n",
     "Merci d’avance pour toutes les mises en relation, les conseils ou les offres que vous pouvez partager.\n",
   ]
-
 
   constructor() {
     this.birthdate = new Date(1992, 1, 11);
