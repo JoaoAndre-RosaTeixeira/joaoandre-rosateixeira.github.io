@@ -13,7 +13,7 @@ export class UserCV {
   private _adresse: string = "2 rue Emile Zola, 63430 Pont-du-Château"
   private _number: string = "06 23 18 71 92"
   private _permis: Array<string> = ["B", "C", "CE", "A2"];
-  private _dowloadableCv: string = "../../../assets/documents/CV-CDA-2021.pdf";
+  private _dowloadableCv: string = "../../../assets/documents/CV-JART-2024.pdf";
   private _dowloadableRPG: string = "../../../assets/documents/newbie.rar";
   private _age: number =0;
 
